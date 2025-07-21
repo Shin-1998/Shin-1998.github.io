@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name | Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <nav>
-    <a href="/">Home</a> |
-    <a href="/about">About</a> |
-    <a href="/projects">Projects</a>
-  </nav>
-  <hr>
-  <main>
-    {{ content }}
-  </main>
+
+  <header>
+    <h1>Your Name</h1>
+    <p>Web Developer • Designer • Learner</p>
+  </header>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="images/project1.png" alt="Project 1"/>
+        <h3>Project Title</h3>
+        <p>Short description of the project.</p>
+        <a href="#">View Project</a>
+      </div>
+      <!-- Add more project cards here -->
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Your Name. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">GitHub</a> • <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
 </body>
 </html>
