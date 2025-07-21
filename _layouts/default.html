@@ -1,32 +1,139 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" style="color-scheme:dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Mohsin, A Solutions Architect | AI SaaS | Next.js Expert</title>
-    <meta name="description" content="Portfolio of Ali Mohsin, A full-stack developer from Pakistan specializing in secure web apps, AI SaaS, and modern frameworks like Next.js and .NET.">
-    <meta name="author" content="Ali Mohsin">
-    <meta name="keywords" content="Ali Mohsin,Full-Stack Developer,Next.js Developer,AI SaaS,Pakistan Developer,.NET Core,Cybersecurity,TailwindCSS,MERN">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Your Name | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="__className_e8ce0c enable-motion underline-links" style="isolation:isolate">
-    <header>
-        <!-- Navigation will go here -->
-    </header>
-    
-    <main>
-        <section class="projects-section">
-            <h1>My Projects</h1>
-            <div class="projects-grid">
-                <!-- Project cards will go here -->
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Your Name</a>
             </div>
-        </section>
-    </main>
-    
-    <footer>
-        <!-- Footer content -->
+            <nav class="nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Hi, I'm <span>Your Name</span></h1>
+            <p class="subtitle">Your Professional Title</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="profile.jpg" alt="Your Name">
+                </div>
+                <div class="about-text">
+                    <p>Your introduction goes here. Talk about your skills, experience, and what you're passionate about.</p>
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <div class="skill-tags">
+                            <span>JavaScript</span>
+                            <span>Python</span>
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>HTML/CSS</span>
+                            <span>Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <!-- Timeline items will be added here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project cards will be added here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>your.email@example.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (123) 456-7890</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Your Location</span>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+        </div>
     </footer>
-    
-    <script src="js/script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
