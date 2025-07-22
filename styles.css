@@ -250,82 +250,140 @@ a {
     height: auto;
 }
 
-/* Experience Section */
-.experience-tabs {
-    display: flex;
-    gap: 50px;
+/* Education Section */
+.education {
+    background: var(--background-light);
+}
+
+.education-tabs {
+    margin-top: 2rem;
 }
 
 .tab-buttons {
     display: flex;
-    flex-direction: column;
-    border-left: 1px solid var(--gray);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
 }
 
 .tab-btn {
-    padding: 15px 20px;
-    background: none;
+    background: transparent;
     border: none;
-    color: var(--gray);
-    font-family: 'SF Mono', monospace;
-    font-size: 0.9rem;
-    text-align: left;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
     cursor: pointer;
+    position: relative;
     transition: all 0.3s ease;
-    border-left: 2px solid transparent;
-}
-
-.tab-btn:hover {
-    color: var(--primary);
-    background-color: rgba(100, 255, 218, 0.1);
 }
 
 .tab-btn.active {
-    color: var(--primary);
-    border-left: 2px solid var(--primary);
-    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--primary-color);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
 }
 
 .tab-content {
     display: none;
+    padding: 1.5rem 0;
+    animation: fadeIn 0.5s ease;
 }
 
 .tab-content.active {
     display: block;
-    animation: fadeIn 0.5s ease;
 }
 
-.tab-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.education-header {
+    margin-bottom: 1.2rem;
 }
 
-.tab-content h3 span {
-    color: var(--primary);
+.education-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+    line-height: 1.3;
 }
 
-.tab-content .date {
-    font-family: 'SF Mono', monospace;
-    font-size: 0.9rem;
-    color: var(--gray);
-    margin-bottom: 20px;
+.education-title .institution {
+    color: var(--primary-color);
+    font-weight: 500;
 }
 
-.tab-content ul {
-    list-style: none;
+.education-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
 }
 
-.tab-content ul li {
+.education-degree {
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.degree-specialization {
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.education-highlights {
+    margin: 1.5rem 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.education-highlights li {
     position: relative;
-    padding-left: 30px;
-    margin-bottom: 15px;
+    padding-left: 1.8rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    color: var(--text-primary);
 }
 
-.tab-content ul li::before {
-    content: '▹';
+.highlight-icon {
     position: absolute;
     left: 0;
-    color: var(--primary);
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.program-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    padding: 0.5rem 0;
+}
+
+.program-link:hover {
+    color: var(--primary-color-dark);
+    transform: translateX(3px);
+}
+
+.program-link i {
+    font-size: 0.8rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== Projects Section (Complete) ===== */
