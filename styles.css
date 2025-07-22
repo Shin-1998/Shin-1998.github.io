@@ -556,47 +556,59 @@ a {
 
 
 /* Tech Tags with Icons */
+/* ===== Modern Tech Tags ===== */
 .project-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 1.5rem;
+    align-items: center;
+    gap: 6px;
+    margin-top: 1.2rem;
 }
 
 .tech-tag {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 4px 10px 4px 8px;
-    border-radius: 15px;
-    background-color: var(--dark-gray);
+    gap: 5px;
+    padding: 2px 8px;
     color: var(--primary);
-    font-size: 0.75rem;
     font-family: 'SF Mono', monospace;
-    border: 1px solid rgba(100, 255, 218, 0.2);
-    transition: all 0.3s ease;
+    font-size: 0.72rem;
+    border-radius: 3px;
+    background: rgba(100, 255, 218, 0.05);
+    border: 1px solid rgba(100, 255, 218, 0.15);
+    transition: all 0.2s ease;
+    line-height: 1.4;
 }
 
 .tech-tag:hover {
-    background-color: rgba(100, 255, 218, 0.1);
-    transform: translateY(-2px);
+    background: rgba(100, 255, 218, 0.12);
 }
 
 .tech-tag i {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     opacity: 0.9;
 }
 
-/* "+X more" indicator */
 .tech-more {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background-color: rgba(100, 255, 218, 0.1);
-    color: var(--primary);
-    font-size: 0.7rem;
-    margin-left: 4px;
+    color: var(--gray);
+    font-size: 0.65rem;
+    margin-left: 2px;
+    font-family: 'SF Mono', monospace;
+}
+
+/* Icon-specific adjustments */
+.tech-tag .devicon-python-plain {
+    color: #3776ab; /* Python blue */
+}
+
+.tech-tag .fa-robot {
+    color: #64ffda; /* Your primary color */
+}
+
+.tech-tag .fa-chess-board {
+    color: #a8fff0; /* Lighter teal */
+}
+
+.tech-tag .fa-brain {
+    color: #c8fff8; /* Lightest teal */
 }
