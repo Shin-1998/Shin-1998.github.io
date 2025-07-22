@@ -81,3 +81,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update copyright year
     document.querySelector('.copyright').innerHTML = `Designed & Built by Shin &copy; ${new Date().getFullYear()}`;
 });
+
+
+// Add this script if you want to hide extra tags
+document.addEventListener('DOMContentLoaded', function() {
+    const techContainers = document.querySelectorAll('.project-tech');
+    
+    techContainers.forEach(container => {
+        if (container.children.length > 4) {
+            const hiddenCount = container.children.length - 4;
+            const moreIndicator = document.createElement('div');
+            moreIndicator.className = 'tech-more';
+            moreIndicator.textContent = `+${hiddenCount}`;
+            
+            // Hide extra tags
+            Array.from(container.children)
+                .slice(4)
+                .forEach(tag => tag.style.display = 'none');
+            
+            container.appendChild(moreIndicator);
+        }
+    });
+});
