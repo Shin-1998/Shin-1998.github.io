@@ -555,3 +555,48 @@ a {
 }
 
 
+/* Tech Tags with Icons */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 1.5rem;
+}
+
+.tech-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px 4px 8px;
+    border-radius: 15px;
+    background-color: var(--dark-gray);
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-family: 'SF Mono', monospace;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    transform: translateY(-2px);
+}
+
+.tech-tag i {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* "+X more" indicator */
+.tech-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--primary);
+    font-size: 0.7rem;
+    margin-left: 4px;
+}
