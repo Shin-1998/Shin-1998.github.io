@@ -430,3 +430,16 @@ a {
 .tech-tag .fa-robot { color: var(--primary); }
 .tech-tag .fa-chess-board { color: #a8fff0; }
 .tech-tag .fa-brain { color: #c8fff8; }
+
+
+
+/* Scroll Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
