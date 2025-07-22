@@ -250,135 +250,106 @@ a {
     height: auto;
 }
 
-/* Education Section */
-.education {
-    background: var(--background-light);
-}
-
-.education-tabs {
+/* Education Section - Sidebar Style */
+.education-container {
+    display: flex;
+    gap: 2rem;
     margin-top: 2rem;
 }
 
-.tab-buttons {
+.education-sidebar {
     display: flex;
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 1.5rem;
+    flex-direction: column;
+    width: 200px;
+    border-right: 1px solid var(--border-color);
+    padding-right: 1rem;
 }
 
-.tab-btn {
-    background: transparent;
+.edu-tab-btn {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    background: none;
     border: none;
-    padding: 0.8rem 1.5rem;
-    font-size: 0.95rem;
-    font-weight: 500;
+    border-left: 2px solid transparent;
     color: var(--text-secondary);
+    font-weight: 500;
     cursor: pointer;
-    position: relative;
     transition: all 0.3s ease;
 }
 
-.tab-btn.active {
+.edu-tab-btn:hover {
     color: var(--primary-color);
 }
 
-.tab-btn.active::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--primary-color);
+.edu-tab-btn.active {
+    color: var(--primary-color);
+    border-left: 2px solid var(--primary-color);
+    background: rgba(var(--primary-color-rgb), 0.05);
 }
 
-.tab-content {
+.education-content {
+    flex: 1;
+}
+
+.edu-tab-content {
     display: none;
-    padding: 1.5rem 0;
-    animation: fadeIn 0.5s ease;
+    animation: fadeIn 0.4s ease;
 }
 
-.tab-content.active {
+.edu-tab-content.active {
     display: block;
 }
 
-.education-header {
-    margin-bottom: 1.2rem;
-}
-
-.education-title {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-    color: var(--text-primary);
-    line-height: 1.3;
-}
-
-.education-title .institution {
-    color: var(--primary-color);
-    font-weight: 500;
-}
-
-.education-meta {
-    display: flex;
-    gap: 1rem;
+.education-period {
+    color: var(--text-secondary);
+    margin: 0.5rem 0 1rem;
     font-size: 0.95rem;
-    color: var(--text-secondary);
-    margin-bottom: 0.5rem;
 }
 
-.education-degree {
-    font-size: 1.05rem;
-    color: var(--text-primary);
+.education-details {
+    padding-left: 1rem;
+}
+
+.education-details p {
     margin-bottom: 1.5rem;
-    font-weight: 500;
+    line-height: 1.6;
 }
 
-.degree-specialization {
-    color: var(--text-secondary);
-    font-weight: 400;
-}
-
-.education-highlights {
+.education-details ul {
     margin: 1.5rem 0;
-    padding-left: 0;
-    list-style-type: none;
+    padding-left: 1.2rem;
 }
 
-.education-highlights li {
+.education-details li {
     position: relative;
-    padding-left: 1.8rem;
     margin-bottom: 0.8rem;
     line-height: 1.6;
-    color: var(--text-primary);
 }
 
-.highlight-icon {
+.education-details li::before {
+    content: "▹";
     position: absolute;
-    left: 0;
+    left: -1.2rem;
     color: var(--primary-color);
-    font-size: 0.9rem;
 }
 
-.program-link {
+.education-link {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 1rem;
     color: var(--primary-color);
     font-weight: 500;
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    padding: 0.5rem 0;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
 }
 
-.program-link:hover {
-    color: var(--primary-color-dark);
+.education-link:hover {
     transform: translateX(3px);
 }
 
-.program-link i {
-    font-size: 0.8rem;
+.education-link i {
+    font-size: 0.8em;
 }
 
 @keyframes fadeIn {
