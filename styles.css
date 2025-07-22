@@ -443,3 +443,24 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+
+.education-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 15px;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.education-link:hover {
+    color: var(--primary-color-dark);
+    transform: translateX(3px);
+}
+
+.education-link i {
+    font-size: 0.8em;
+}
