@@ -525,3 +525,50 @@ a {
         font-size: 1.8rem;
     }
 }
+
+
+### Added style for tags
+
+/* Add this to your CSS file */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.project-tech span {
+    font-family: 'SF Mono', monospace;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 3px;
+    background-color: var(--dark-gray);
+    color: var(--primary);
+    transition: all 0.3s ease;
+    /* Add subtle border for depth */
+    border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.project-tech span:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    transform: translateY(-2px);
+    /* Slightly brighter text on hover */
+    color: #7dffe8;
+}
+
+/* Optional: Different colors for different tech categories */
+.project-tech span:nth-child(1) { /* Python */
+    color: #64ffda;
+}
+.project-tech span:nth-child(2) { /* Tkinter */
+    color: #88ffdd;
+}
+.project-tech span:nth-child(3) { /* AI Algorithms */
+    color: #a8fff0;
+}
+.project-tech span:nth-child(4) { /* Minimax */
+    color: #c8fff8;
+}
+.project-tech span:nth-child(5) { /* Heuristics */
+    color: #e8ffff;
+}
