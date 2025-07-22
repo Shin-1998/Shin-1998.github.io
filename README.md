@@ -1,2 +1,2 @@
-# Shin-1998.github.io
+# ChiaraBenini Portfolio
 Online CV and Portfolio
