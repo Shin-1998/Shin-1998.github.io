@@ -554,19 +554,4 @@ a {
     color: #7dffe8;
 }
 
-/* Optional: Different colors for different tech categories */
-.project-tech span:nth-child(1) { /* Python */
-    color: #64ffda;
-}
-.project-tech span:nth-child(2) { /* Tkinter */
-    color: #88ffdd;
-}
-.project-tech span:nth-child(3) { /* AI Algorithms */
-    color: #a8fff0;
-}
-.project-tech span:nth-child(4) { /* Minimax */
-    color: #c8fff8;
-}
-.project-tech span:nth-child(5) { /* Heuristics */
-    color: #e8ffff;
-}
+
