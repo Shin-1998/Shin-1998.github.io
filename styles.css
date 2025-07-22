@@ -250,112 +250,84 @@ a {
     height: auto;
 }
 
-/* Education Section - Sidebar Style */
-.education-container {
+/* Experience Section */
+.experience-tabs {
     display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 50px;
 }
 
-.education-sidebar {
+.tab-buttons {
     display: flex;
     flex-direction: column;
-    width: 200px;
-    border-right: 1px solid var(--border-color);
-    padding-right: 1rem;
+    border-left: 1px solid var(--gray);
 }
 
-.edu-tab-btn {
-    text-align: left;
-    padding: 0.75rem 1rem;
-    margin-bottom: 0.5rem;
+.tab-btn {
+    padding: 15px 20px;
     background: none;
     border: none;
-    border-left: 2px solid transparent;
-    color: var(--text-secondary);
-    font-weight: 500;
+    color: var(--gray);
+    font-family: 'SF Mono', monospace;
+    font-size: 0.9rem;
+    text-align: left;
     cursor: pointer;
     transition: all 0.3s ease;
+    border-left: 2px solid transparent;
 }
 
-.edu-tab-btn:hover {
-    color: var(--primary-color);
+.tab-btn:hover {
+    color: var(--primary);
+    background-color: rgba(100, 255, 218, 0.1);
 }
 
-.edu-tab-btn.active {
-    color: var(--primary-color);
-    border-left: 2px solid var(--primary-color);
-    background: rgba(var(--primary-color-rgb), 0.05);
+.tab-btn.active {
+    color: var(--primary);
+    border-left: 2px solid var(--primary);
+    background-color: rgba(100, 255, 218, 0.1);
 }
 
-.education-content {
-    flex: 1;
-}
-
-.edu-tab-content {
+.tab-content {
     display: none;
-    animation: fadeIn 0.4s ease;
 }
 
-.edu-tab-content.active {
+.tab-content.active {
     display: block;
+    animation: fadeIn 0.5s ease;
 }
 
-.education-period {
-    color: var(--text-secondary);
-    margin: 0.5rem 0 1rem;
-    font-size: 0.95rem;
+.tab-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
-.education-details {
-    padding-left: 1rem;
+.tab-content h3 span {
+    color: var(--primary);
 }
 
-.education-details p {
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+.tab-content .date {
+    font-family: 'SF Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 20px;
 }
 
-.education-details ul {
-    margin: 1.5rem 0;
-    padding-left: 1.2rem;
+.tab-content ul {
+    list-style: none;
 }
 
-.education-details li {
+.tab-content ul li {
     position: relative;
-    margin-bottom: 0.8rem;
-    line-height: 1.6;
+    padding-left: 30px;
+    margin-bottom: 15px;
 }
 
-.education-details li::before {
-    content: "▹";
+.tab-content ul li::before {
+    content: '▹';
     position: absolute;
-    left: -1.2rem;
-    color: var(--primary-color);
+    left: 0;
+    color: var(--primary);
 }
 
-.education-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--primary-color);
-    font-weight: 500;
-    margin-top: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.education-link:hover {
-    transform: translateX(3px);
-}
-
-.education-link i {
-    font-size: 0.8em;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 
 /* ===== Projects Section (Complete) ===== */
 .projects-grid {
