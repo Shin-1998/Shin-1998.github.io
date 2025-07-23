@@ -452,6 +452,7 @@ a {
     background: rgba(100, 255, 218, 0.05);
     transition: all 0.2s ease;
     line-height: 1.4;
+    border: 1px solid rgba(100, 255, 218, 0.15);
 }
 
 
