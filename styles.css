@@ -340,12 +340,18 @@ a {
     border-radius: 5px;
     padding: 30px;
     transition: all 0.3s ease;
-    height: 100%; /* Ensures consistent card heights */
+    height: 340px; /* Set fixed height */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    z-index: 2;
 }
 
 .project-header {
@@ -380,9 +386,13 @@ a {
 }
 
 .project-description {
-    margin-bottom: 20px;
-    font-size: 0.95rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Show only 3 lines */
+    -webkit-box-orient: vertical;
     color: var(--gray);
+    font-size: 0.95rem;
 }
 
 /* ===== Modern Tech Tags ===== */
