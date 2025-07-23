@@ -337,15 +337,16 @@ a {
 
 .project-card {
     background-color: var(--dark);
-    border-radius: 5px;
-    padding: 30px;
+    border-radius: 8px;
+    padding: 25px 25px 20px;
     transition: all 0.3s ease;
-    height: 340px; /* Set fixed height */
-    overflow: hidden;
-    position: relative;
+    height: 360px; /* consistent height */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    
 }
 
 .project-card:hover {
@@ -381,27 +382,33 @@ a {
 }
 
 .project-title {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.4;
     margin-bottom: 15px;
+    color: var(--white);
+    min-height: 3.4em;
 }
 
 .project-description {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Show only 3 lines */
+    -webkit-line-clamp: 3; /* show 3 lines */
     -webkit-box-orient: vertical;
-    color: var(--gray);
-    font-size: 0.95rem;
+    min-height: 4.5em; /* reserve space visually */
 }
 
 /* ===== Modern Tech Tags ===== */
 .project-tech {
+    margin-top: auto;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 6px;
-    margin-top: 1.2rem;
+    gap: 8px;
 }
 
 .tech-tag {
