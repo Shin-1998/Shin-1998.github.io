@@ -329,6 +329,13 @@ a {
 }
 
 /* ===== Projects Section (Complete) ===== */
+
+.project-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--dark-gray);
+}
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -338,21 +345,20 @@ a {
 .project-card {
     background-color: var(--dark);
     border-radius: 8px;
-    padding: 25px 25px 20px;
+    /*padding: 25px 25px 20px;*/
     transition: all 0.3s ease;
-    height: 360px; /* consistent height */
+    height: 460px; /* consistent height */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
     position: relative;
-    
+    padding: 0;    
 }
 
 .project-card:hover {
-    transform: translateY(-10px) scale(1.03);
+    transform: translateY(-10px) scale(1.02);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    z-index: 2;
 }
 
 .project-header {
@@ -382,10 +388,10 @@ a {
 }
 
 .project-title {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 600;
     line-height: 1.4;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: var(--white);
     min-height: 3.4em;
 }
@@ -403,12 +409,35 @@ a {
     min-height: 4.5em; /* reserve space visually */
 }
 
+.project-body {
+    flex: 1;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 /* ===== Modern Tech Tags ===== */
 .project-tech {
-    margin-top: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+}
+
+.github-link {
+    color: var(--light);
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: var(--primary);
+}
+
+
+.view-details {
+    font-size: 0.9rem;
+    padding: 8px 20px;
 }
 
 .tech-tag {
