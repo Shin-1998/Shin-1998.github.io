@@ -450,14 +450,11 @@ a {
     font-size: 0.72rem;
     border-radius: 3px;
     background: rgba(100, 255, 218, 0.05);
-    border: 1px solid rgba(100, 255, 218, 0.15);
     transition: all 0.2s ease;
     line-height: 1.4;
 }
 
-.tech-tag:hover {
-    background: rgba(100, 255, 218, 0.12);
-}
+
 
 .tech-tag i {
     font-size: 0.7rem;
