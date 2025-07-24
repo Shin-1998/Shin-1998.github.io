@@ -345,7 +345,7 @@ a {
 .project-card {
     background-color: var(--dark);
     border-radius: 8px;
-    /*padding: 25px 25px 20px;*/
+    padding: 25px 25px 20px;
     transition: all 0.3s ease;
     height: 460px; /* consistent height */
     display: flex;
@@ -353,7 +353,6 @@ a {
     justify-content: space-between;
     overflow: hidden;
     position: relative;
-    padding: 0;    
 }
 
 .project-card:hover {
@@ -455,6 +454,9 @@ a {
     border: 1px solid rgba(100, 255, 218, 0.15);
 }
 
+.tech-tag:hover {
+    background: rgba(100, 255, 218, 0.12);
+}
 
 
 .tech-tag i {
