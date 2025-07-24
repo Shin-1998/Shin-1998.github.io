@@ -122,7 +122,7 @@ reveals.forEach(reveal => {
 document.addEventListener('DOMContentLoaded', async function() {
   try {
     // Fetch projects data
-    const response = await fetch('./src/data/projects.json');
+    const response = await fetch('./data/project_data.json');
     const projectsData = await response.json();
     
     // Initialize the page
