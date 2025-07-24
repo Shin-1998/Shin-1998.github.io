@@ -118,3 +118,84 @@ reveals.forEach(reveal => {
   revealObserver.observe(reveal);
 });
 
+
+document.addEventListener('DOMContentLoaded', async function() {
+  try {
+    // Fetch projects data
+    const response = await fetch('./src/data/projects.json');
+    const projectsData = await response.json();
+    
+    // Initialize the page
+    renderProjects(projectsData);
+    renderTagFilters(projectsData);
+    
+    // Set up filter functionality
+    setupFilterHandlers(projectsData);
+    
+  } catch (error) {
+    console.error('Error loading projects:', error);
+    // Fallback: You could render static content here
+  }
+});
+
+function renderProjects(projects, filter = 'all') {
+  const projectsGrid = document.getElementById('projects-grid');
+  projectsGrid.innerHTML = '';
+  
+  const filteredProjects = filter === 'all' 
+    ? projects 
+    : projects.filter(project => project.tags.includes(filter));
+  
+  filteredProjects.forEach(project => {
+    projectsGrid.innerHTML += createProjectCard(project);
+  });
+}
+
+function createProjectCard(project) {
+  const tagsHTML = project.tags.map(tag => `
+    <div class="tech-tag">
+      <i class="${project.icons[tag]}"></i>${tag}
+    </div>
+  `).join('');
+  
+  return `
+    <div class="project-card" data-tags="${project.tags.join(',')}">
+      <div class="project-header">
+        <div class="folder-icon">
+          <i class="fas fa-folder"></i>
+        </div>
+        <div class="project-links">
+          <a href="${project.github}" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <h3 class="project-title">${project.title}</h3>
+      <p class="project-description">${project.description}</p>
+      <div class="project-tech">
+        ${tagsHTML}
+      </div>
+    </div>
+  `;
+}
+
+function renderTagFilters(projects) {
+  const filterTagsContainer = document.getElementById('filter-tags');
+  const allTags = [...new Set(projects.flatMap(project => project.tags))];
+  
+  allTags.forEach(tag => {
+    filterTagsContainer.innerHTML += `
+      <button class="filter-tag" data-filter="${tag}">${tag}</button>
+    `;
+  });
+}
+
+function setupFilterHandlers(projects) {
+  document.querySelectorAll('.filter-tag').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tag').forEach(btn => 
+        btn.classList.remove('active')
+      );
+      button.classList.add('active');
+      renderProjects(projects, button.dataset.filter);
+    });
+  });
+}
